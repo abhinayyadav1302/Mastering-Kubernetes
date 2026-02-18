@@ -41,8 +41,8 @@ spec:
     image: myapp:latest
     readinessProbe:
       httpGet:
-        path: /healthz
-        port: 8080
+        path: /index.html
+        port: 80
       initialDelaySeconds: 5
       periodSeconds: 10
 ```
@@ -70,8 +70,8 @@ spec:
     image: myapp:latest
     livenessProbe:
       httpGet:
-        path: /healthz
-        port: 8080
+        path: /index.html
+        port: 80
       initialDelaySeconds: 3
       periodSeconds: 5
 ```
@@ -108,14 +108,14 @@ spec:
         image: myapp:latest
         readinessProbe:
           httpGet:
-            path: /ready
-            port: 8080
+            path: /index.html
+            port: 80
           initialDelaySeconds: 5
           periodSeconds: 10
         livenessProbe:
           httpGet:
-            path: /live
-            port: 8080
+            path: /index.html
+            port: 80
           initialDelaySeconds: 3
           periodSeconds: 5
 ```
